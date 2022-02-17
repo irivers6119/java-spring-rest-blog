@@ -2,8 +2,10 @@ package com.pluralsight.blog.data;
 
 import com.pluralsight.blog.model.Author;
 import com.pluralsight.blog.model.Post;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -20,7 +22,7 @@ public class DatabaseLoader implements ApplicationRunner {
     public List<Author> authors = new ArrayList<>();
     private final PostRepository postRepository;
 
-
+    @Autowired
     public DatabaseLoader(PostRepository postRepository) {
         this.postRepository = postRepository;
     }
