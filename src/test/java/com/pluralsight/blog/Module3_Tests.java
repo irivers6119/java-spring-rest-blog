@@ -63,7 +63,7 @@ public class Module3_Tests {
         assertEquals(message, 1, annotations.length);
         assertEquals(message, Version.class, annotations[0].annotationType());
 
-        // **** Add Author verion
+        // **** Add Author version
         field = null;
         try {
             field =  Author.class.getDeclaredField("version");
